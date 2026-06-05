@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+            <!-- Logo -->
+          <img src = "img_1.png" width="80px" height="75px" style="border-radius: 50%;border: 2px solid black;">
+
+            <!-- Desktop Links -->
+            <ul class="hidden md:flex space-x-8 font-medium">
+                <li><a href="#" class="hover:text-blue-600">Home</a></li>
+                <li><a href="#" class="hover:text-blue-600">Features</a></li>
+                <li><a href="#" class="hover:text-blue-600">About</a></li>
+                <li><a href="#" class="hover:text-blue-600">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Hamburger -->
+            <button id="menu-btn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
+            <ul class="space-y-3">
+                <li><a href="#" class="block">Home</a></li>
+                <li><a href="#" class="block">Features</a></li>
+                <li><a href="#" class="block">About</a></li>
+                <li><a href="#" class="block">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="text-center py-20 px-6">
+        <h2 class="text-4xl md:text-6xl font-bold mb-6">
+            Build Amazing Websites
+        </h2>
+
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-8">
+            Create beautiful and responsive websites easily using
+            HTML and Tailwind CSS.
+        </p>
+
+        <!-- Buttons -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button
+                class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+                Get Started
+            </button>
+
+            <button
+                class="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50">
+                Learn More
+            </button>
+        </div>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+    <section id="features" class="py-16 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+
+            <h2 class="text-3xl font-bold text-center mb-12">
+                Our Features
+            </h2>
+
+            <!-- Responsive Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card 1 -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow">
+                    <i class="fas fa-bolt text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">
+                        Fast Performance
+                    </h3>
+                    <p class="text-gray-600">
+                        Optimized for speed and smooth user experience.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow">
+                    <i class="fas fa-mobile-alt text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">
+                        Mobile Friendly
+                    </h3>
+                    <p class="text-gray-600">
+                        Works perfectly on phones, tablets, and desktops.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow">
+                    <i class="fas fa-shield-alt text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">
+                        Secure
+                    </h3>
+                    <p class="text-gray-600">
+                        Built with modern best practices and security.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-6">
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+
+                <!-- Footer Links -->
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-blue-400">Home</a>
+                    <a href="#" class="hover:text-blue-400">Features</a>
+                    <a href="#" class="hover:text-blue-400">Contact</a>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="flex gap-5 text-xl">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <hr class="my-6 border-gray-700">
+
+            <p class="text-center text-gray-400">
+                © 2026 MyLogo. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+</html>
